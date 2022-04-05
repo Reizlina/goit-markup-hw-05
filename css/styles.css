@@ -82,6 +82,23 @@ body {
 .socials-list {
   list-style: none;
 }
+
+.site-nav-link {
+  position: relative;
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  bottom: -33px;
+  left: 0;
+
+  height: 4px;
+  width: 100%;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
 .socials {
   color: var(--primary-text-color);
   font-weight: 500;
@@ -543,4 +560,37 @@ body {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.87;
+}
+.portfolio-hover-box-relative {
+  position: relative;
+}
+
+.portfolio-hover-box {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+
+.portfolio-item:hover .portfolio-hover-box {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.portfolio-hover-text {
+  font-family: 'Roboto' sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+
+  letter-spacing: 0.03em;
+  color: var(--primary-bg-color);
+
+  padding: 63px 24px;
 }
