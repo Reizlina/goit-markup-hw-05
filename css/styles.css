@@ -563,6 +563,7 @@ body {
 }
 .portfolio-hover-box-relative {
   position: relative;
+  overflow: hidden;
 }
 
 .portfolio-hover-box {
