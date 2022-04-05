@@ -69,7 +69,8 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition: 0.4s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -106,7 +107,8 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   display: flex;
-  transition: 0.4s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials:hover,
 .socials:focus {
@@ -120,7 +122,8 @@ body {
   max-width: 20px;
   margin-right: 10px;
   fill: var(--primary-text-color);
-  transition: 0.4s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials:hover .decor-icon-header,
@@ -142,7 +145,8 @@ body {
   padding-bottom: 9px;
 }
 .footer a {
-  transition: 0.4s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer a:hover,
@@ -213,7 +217,8 @@ body {
   margin-right: 10px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: 0.4s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-decor-item:hover {
@@ -437,7 +442,8 @@ body {
   margin: 0 5px;
   border-radius: 50%;
 
-  transition: 0.4s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .decor-team-item:hover {
@@ -474,7 +480,8 @@ body {
   padding: 16px 32px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: 0.4s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .regular-custumers-item:hover .regular-custumers-icon {
@@ -483,6 +490,77 @@ body {
 
 .regular-custumers-icon:hover {
   fill: var(--accent-color);
+}
+
+/* МОДАЛЬНОЕ ОКНО */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 528px;
+  height: 581px;
+
+  background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-btn::before,
+.modal-close-btn::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+
+  width: 18px;
+  height: 2px;
+  top: 13px;
+  right: 5px;
+
+  background-color: var(--title-text-color);
+}
+
+.modal-close-btn::before {
+  rotate: 45deg;
+}
+.modal-close-btn::after {
+  rotate: -45deg;
 }
 
 /* Стили для ПОРТФОЛИО */
@@ -516,7 +594,8 @@ body {
   font-size: 16px;
   line-height: 1.62;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
@@ -564,7 +643,8 @@ body {
 }
 .portfolio-item {
   margin-top: 30px;
-  transition: 0.4s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover {
@@ -605,7 +685,8 @@ body {
   opacity: 0;
 
   transform: translateY(100%);
-  transition: 0.5s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover .portfolio-hover-box {
