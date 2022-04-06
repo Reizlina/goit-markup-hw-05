@@ -541,6 +541,7 @@ body {
   border-radius: 50%;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .modal-close-cross::before,
@@ -557,10 +558,10 @@ body {
 }
 
 .modal-close-cross::before {
-  transform: translate(-50%, -50%) rotate 45deg;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 .modal-close-cross::after {
-  transform: translate(-50%, -50%) rotate -45deg;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /* Стили для ПОРТФОЛИО */
