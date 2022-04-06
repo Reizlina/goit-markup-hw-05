@@ -516,11 +516,12 @@ body {
 }
 
 .modal {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px;
 
   width: 528px;
   height: 581px;
@@ -531,7 +532,7 @@ body {
   border-radius: 4px;
 }
 
-.modal-close-btn {
+.modal-close-cross {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -542,27 +543,24 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.modal-close-btn::before,
-.modal-close-btn::after {
+.modal-close-cross::before,
+.modal-close-cross::after {
   content: '';
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
 
-  width: 18px;
+  width: 15px;
   height: 2px;
-  top: 13px;
-  right: 5px;
+  background-color: black;
 
-  background-color: var(--title-text-color);
+  top: 50%;
+  left: 50%;
 }
 
-.modal-close-btn::before {
-  rotate: 45deg;
+.modal-close-cross::before {
+  transform: translate(-50%, -50%) rotate 45deg;
 }
-.modal-close-btn::after {
-  rotate: -45deg;
+.modal-close-cross::after {
+  transform: translate(-50%, -50%) rotate -45deg;
 }
 
 /* Стили для ПОРТФОЛИО */
@@ -588,49 +586,35 @@ body {
 }
 
 .filter-button {
-  font-family: Roboto;
-  color: var(--title-text-color);
-  background-color: #f5f4fa;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  cursor: pointer;
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.filter-button:hover,
-.filter-button:focus {
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
-}
-
-.filter-button {
   padding: 0;
   border: none;
   font: inherit;
   color: inherit;
   background-color: transparent;
 
-  font-family: 'Roboto';
+  font-family: 'Roboto' sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
 
   color: var(--title-text-color);
   background-color: #f5f4fa;
+  cursor: pointer;
 
   padding: 6px 22px;
   border-radius: 4px;
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
 .filter-button:focus {
-  background: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--primary-bg-color);
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
